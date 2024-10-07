@@ -2,7 +2,7 @@ FROM node:20-bookworm AS builder
 # global installs need root permissions, so have to happen before we switch to
 # the node user
 RUN npm i -g pnpm@9
-# node images create a non-root user that we can use
+# node images create a non-root user that we can use this file 
 USER node
 WORKDIR /home/node/build
 
